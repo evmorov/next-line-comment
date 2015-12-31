@@ -1,0 +1,16 @@
+{
+  "name": "next-line-comment",
+  "main": "./lib/next-line-comment",
+  "version": "0.1.0",
+  "description": "Go to the next line after commenting",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "next-line-comment:toggle"
+  },
+  "repository": "https://github.com/atom/next-line-comment",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
