@@ -1,9 +1,11 @@
 {
   "name": "next-line-comment",
   "main": "./lib/next-line-comment",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Go to the next line after commenting",
-  "keywords": ["comment"],
+  "keywords": [
+    "comment"
+  ],
   "activationCommands": {
     "atom-workspace": "next-line-comment:toggle"
   },
