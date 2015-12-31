@@ -7,7 +7,7 @@
   "activationCommands": {
     "atom-workspace": "next-line-comment:toggle"
   },
-  "repository": "https://github.com/atom/next-line-comment",
+  "repository": "https://github.com/evmorov/next-line-comment",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
