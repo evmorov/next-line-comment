@@ -1,7 +1,7 @@
 {
   "name": "next-line-comment",
   "main": "./lib/next-line-comment",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Go to the next line after commenting",
   "keywords": [
     "comment"
