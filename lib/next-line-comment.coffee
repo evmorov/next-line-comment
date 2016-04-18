@@ -18,7 +18,14 @@ module.exports = NextLineComment =
       for selection in editor.selections
         selection.toggleLineComments()
 
+    return if editor.hasMultipleCursors() or @isMultiSelection(editor) or @isLastLine(editor)
+
+    editor.setCursorScreenPosition position
+    editor.moveDown()
+
+  isMultiSelection: (editor) ->
     range = editor.getSelectedScreenRange()
-    if !editor.hasMultipleCursors() and (range.start.row - range.end.row is 0)
-      editor.setCursorScreenPosition position
-      editor.moveDown()
+    range.start.row - range.end.row isnt 0
+
+  isLastLine: (editor) ->
+    editor.getLastBufferRow() is editor.getCursorBufferPosition().row
