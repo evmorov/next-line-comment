@@ -55,6 +55,13 @@ describe 'NextLineComment', ->
       expect(cursor1.getBufferPosition()).toEqual([0, 5])
       expect(cursor2.getBufferPosition()).toEqual([2, 5])
 
+    it 'uncomments recently commented lines with one stroke', ->
+      atom.commands.dispatch(editorElement, 'next-line-comment:toggle')
+      expect(buffer.lineForRow(0)).toBe '3.times do |i|'
+      expect(buffer.lineForRow(1)).toBe '  puts "#{i + 1}. Hello!"'
+      expect(buffer.lineForRow(2)).toBe "  puts ''"
+      expect(buffer.lineForRow(3)).toBe 'end'
+
   describe 'when there are several lines selected', ->
     beforeEach ->
       editor.setSelectedBufferRange([[0, 5], [1, 5]])
